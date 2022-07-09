@@ -9,11 +9,9 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
 
     context.res = {
         // status: 200, /* Defaults to 200 */
-        body: {
-            input: name,
-            data: [],
-            message: responseMessage
-        }
+        message: responseMessage,
+        data: [],
+        name: name
     };
 
 };
