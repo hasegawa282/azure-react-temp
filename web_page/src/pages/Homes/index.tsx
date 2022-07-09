@@ -3,6 +3,10 @@ import RoundedButton from 'components/atoms/RoundedButton';
 import React, { useEffect} from 'react';
 import styled from 'styled-components';
 
+// -- external components --
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid"; // pluginは、あとから
+
 
 
 // -- main component --
@@ -26,6 +30,7 @@ const Homes: React.FC = () => {
   return (
     <Wrap>
         <RoundedButton text="sample" />
+        <FullCalendar plugins={[dayGridPlugin]} initialView="dayGridMonth" locale="ja"/>
     </Wrap>
   );
 };
@@ -33,6 +38,8 @@ const Homes: React.FC = () => {
 // -- styled components --
 const Wrap = styled.div`
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 `
 

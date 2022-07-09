@@ -1,0 +1,29 @@
+{
+  "name": "kddi-g",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-api": "cd api && npm start",
+    "start-app": "cd app && npm start",
+    "start-dev": "concurrently \"npm:start-api\" \"npm:start-app\" ",
+    "start-swa": "swa start http://localhost:3000 --api-location http://localhost:7071",
+    "start": " npm run start-dev && npm run swa-up"
+  }, 
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasegawa282/azure-react-temp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hasegawa282/azure-react-temp/issues"
+  },
+  "homepage": "https://github.com/hasegawa282/azure-react-temp#readme",
+  "devDependencies": {
+    "@azure/static-web-apps-cli": "^1.0.2",
+    "azure-functions-core-tools": "^3.0.4585",
+    "concurrently": "^7.2.2"
+  }
+}
